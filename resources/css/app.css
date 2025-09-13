@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@import "devicon/devicon.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: Helvetica, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --animate-aurora: aurora 60s linear infinite;
+      @keyframes aurora {
+        from {
+          background-position: 50% 50%, 50% 50%;
+        }
+        to {
+          background-position: 350% 50%, 350% 50%;
+        }
+    }
+
+    --animate-gradient-text: gradient-text 5s ease infinite;
+        @keyframes gradient-text {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+    }
+
+    --animate-glow: glow 6s ease infinite;
+    @keyframes glow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    --animate-beam: beam 12s ease-in-out infinite;
+    @keyframes beam {
+        0% {
+        stroke-dasharray: 5, 200;
+        stroke-dashoffset: 0;
+        }
+        50% {
+        stroke-dasharray: 100, 200;
+        stroke-dashoffset: -50;
+        }
+        100% {
+        stroke-dasharray: 5, 200;
+        stroke-dashoffset: -200;
+        }
+    }
+    --animate-gradient-x: gradient-x 5s ease infinite;
+    @keyframes gradient-x {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    } 
+}
